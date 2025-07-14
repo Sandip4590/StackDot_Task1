@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -7,6 +8,8 @@ import toast from "react-hot-toast";
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  const navigate = useNavigate()
 
   const handle = () => {
     setEmail(email);
@@ -37,7 +40,7 @@ const Login = () => {
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
-          className="  rounded-md w-full p-2.5 shadow-blue-200 shadow-md  "
+          className=" rounded-md w-full p-2.5 shadow-blue-200 shadow-md  "
         />
         <input
           placeholder="Enter Your password Here"
